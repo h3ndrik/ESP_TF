@@ -9,6 +9,7 @@ git clone --recurse-submodules https://github.com/espressif/esp-tflite-micro.git
 echo "Making tensorflow files structured for PIO/Arduino"
 mkdir ./src/
 cp -r ./esp-tflite-micro/tensorflow/ ./src/tensorflow/
+cp -r ./esp-tflite-micro/signal/ ./src/signal/
 cp -r ./esp-tflite-micro/third_party/flatbuffers/include/flatbuffers/ ./src/
 sed -i 's/utility.h/utility/g' ./src/flatbuffers/base.h
 cp -r ./esp-tflite-micro/third_party/gemmlowp/fixedpoint/ ./src/  
