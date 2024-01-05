@@ -17,6 +17,6 @@ limitations under the License.
 
 #undef FIXED_POINT
 namespace kiss_fft_float {
-#include "kiss_fft.c"
-#include "tools/kiss_fftr.c"
+#include "kissfft/kiss_fft.c"
+#include "kissfft/kiss_fftr.c"
 }  // namespace kiss_fft_float

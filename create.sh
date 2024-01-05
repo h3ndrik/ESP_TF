@@ -18,10 +18,10 @@ cp -r ./esp-tflite-micro/third_party/kissfft/ ./src/
 cp -r ./esp-tflite-micro/third_party/ruy/ruy/ ./src/
 cp -a ./src/kissfft/tools/. ./src/kissfft/
 rm -r ./src/kissfft/tools/
-find ./src/tensorflow/ -type f -exec sed -i -e 's/#include "kiss_fft.c"/#include "kissfft\/kiss_fft.c"/g' {} \;
-find ./src/tensorflow/ -type f -exec sed -i -e 's/#include "kiss_fft.h"/#include "kissfft\/kiss_fft.h"/g' {} \;
-find ./src/tensorflow/ -type f -exec sed -i -e 's/#include "tools\/kiss_fftr.c"/#include "kissfft\/kiss_fftr.c"/g' {} \;
-find ./src/tensorflow/ -type f -exec sed -i -e 's/#include "tools\/kiss_fftr.h"/#include "kissfft\/kiss_fftr.h"/g' {} \;
+find ./src/tensorflow/ ./src/signal/ -type f -exec sed -i -e 's/#include "kiss_fft.c"/#include "kissfft\/kiss_fft.c"/g' {} \;
+find ./src/tensorflow/ ./src/signal/ -type f -exec sed -i -e 's/#include "kiss_fft.h"/#include "kissfft\/kiss_fft.h"/g' {} \;
+find ./src/tensorflow/ ./src/signal/ -type f -exec sed -i -e 's/#include "tools\/kiss_fftr.c"/#include "kissfft\/kiss_fftr.c"/g' {} \;
+find ./src/tensorflow/ ./src/signal/ -type f -exec sed -i -e 's/#include "tools\/kiss_fftr.h"/#include "kissfft\/kiss_fftr.h"/g' {} \;
 
 echo "Use esp-nn kernals"
 #replace standard kernals with esp nn

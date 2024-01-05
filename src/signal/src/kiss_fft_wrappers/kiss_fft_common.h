@@ -21,7 +21,7 @@ limitations under the License.
 // files within their kissfft_$type namespaces.
 // E.g., This header avoids kissfft_int16.h containing:
 //   namespace kiss_fft_int16 {
-//     #include "kiss_fft.h"
+//     #include "kissfft/kiss_fft.h"
 //   }
 // where kiss_fft_.h contains:
 //   #include <math.h>
