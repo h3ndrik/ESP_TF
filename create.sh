@@ -46,6 +46,7 @@ find ./src/esp-nn/ -type f -exec sed -i -e 's/#include <common_functions.h>/#inc
 find ./src/esp-nn/ -type f -exec sed -i -e 's/#include <esp_nn_defs.h>/#include "esp_nn_defs.h"/g' {} \;
 #find ./src/esp-nn/ -type f -exec sed -i -e 's/#include <esp_nn.h>/#include "esp_nn.h"/g' {} \;
 find ./src/tensorflow/ -type f -exec sed -i -e 's/#include <esp_nn.h>/#include "esp-nn\/esp_nn.h"/g' {} \;
+find ./src/esp-nn/ -type f -iname "*esp32s3.S" -exec cat <(echo "#ifdef ARCH_ESP32_S3") {} \; <(echo "#endif") > {} \;
 
 echo "Clean up"
 #clean up 
