@@ -1,3 +1,4 @@
+#ifdef ARCH_ESP32_S3
 //
 // SPDX-FileCopyrightText: 2020-2023 Espressif Systems (Shanghai) CO LTD
 //
@@ -207,3 +208,4 @@ esp_nn_fully_connected_s8_esp32s3:  # 0x4
     retw.n                          # [0]
 
     .size   esp_nn_fully_connected_s8_esp32s3, . - esp_nn_fully_connected_s8_esp32s3
+#endif

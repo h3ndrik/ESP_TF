@@ -1,3 +1,4 @@
+#ifdef ARCH_ESP32_S3
 // Copyright 2021-2022 Espressif Systems (Shanghai) PTE LTD
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -484,3 +485,4 @@ esp_nn_conv_s8_mult8_1x1_esp32s3:  # 0xdbc
     j   .process_leftover
 
     .size   esp_nn_conv_s8_mult8_1x1_esp32s3, . - esp_nn_conv_s8_mult8_1x1_esp32s3
+#endif

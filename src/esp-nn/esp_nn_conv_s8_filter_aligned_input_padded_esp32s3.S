@@ -1,3 +1,4 @@
+#ifdef ARCH_ESP32_S3
 //
 // SPDX-FileCopyrightText: 2023 Espressif Systems (Shanghai) CO LTD
 //
@@ -258,3 +259,4 @@ esp_nn_conv_s8_filter_aligned_input_padded_esp32s3:
 	retw.n
 
 	.size	esp_nn_conv_s8_filter_aligned_input_padded_esp32s3, .-esp_nn_conv_s8_filter_aligned_input_padded_esp32s3
+#endif

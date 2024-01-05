@@ -1,3 +1,4 @@
+#ifdef ARCH_ESP32_S3
 // Copyright 2021-2023 Espressif Systems (Shanghai) PTE LTD
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -625,3 +626,4 @@ esp_nn_add_elementwise_s8_esp32s3:  # 0x4
     retw.n                          # [0]
 
     .size   esp_nn_add_elementwise_s8_esp32s3, . - esp_nn_add_elementwise_s8_esp32s3
+#endif
